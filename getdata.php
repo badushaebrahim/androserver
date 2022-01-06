@@ -1,5 +1,5 @@
 <?php
-include 'con.php';
+include 'con22.php';
 
 $res= "SELECT * FROM `sellings`";
 $r= mysqli_query($conn,$res);

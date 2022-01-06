@@ -1,16 +1,22 @@
 <?php
-include 'con.php';
+include 'con22.php';
 
     
-	   $name=$_POST['t1'];
-	   $design=$_POST['t2'];	   
+	   $name=$_POST['prod_name'];
+	   $details=$_POST['details'];	   
+	   $type=$_POST['type'];	   
+	   $price=$_POST['price'];	   
+	   $sellerid=$_POST['sellerid'];	   
 	   $img=$_POST['upload'];
+	   $pi= int($price)
 
                    $filename="IMG".rand().".jpg";
-	   file_put_contents("images/".$filename,base64_decode($img));
+	   file_put_contents("upload/".$filename,base64_decode($img));
+		$mr= "SELECT * FROM `users` WHERE `uid`=$sellerid";
+		$re=mysqli_query($conn,$mr);
+		$lam=mysqli_fetch_assoc($re);
 
-			$qry="INSERT INTO `tbl_staff` (`id`, `name`, `desig`, `image`)
-			      VALUES (NULL, '$name', '$design', '$filename')";
+$qry="INSERT INTO `sellings`(`Listing_title`, `imagelink`, `long_details`, `latitude`, `longi`, `sellerid`,  `expected_price`) VALUES ('$name','$filename','$details','$lam[lat]','$lam[longi]','$sellerid',$pi)";
 
 			$res=mysqli_query($conn,$qry);
 			

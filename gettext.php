@@ -1,5 +1,5 @@
 <?php
-include 'con.php';
+include 'con22.php';
 
 //$msg=$_GET['msg'];
 	$lname=$_GET['listingname'];

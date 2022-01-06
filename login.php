@@ -1,10 +1,10 @@
 
 
 <?php
-// Check if email and password are set
+// Check if email and password are sets
 if(isset($_POST['email']) && isset($_POST['password'])){
     // Include the necessary files
-    require_once "con.php";
+    require_once "con22.php";
     require_once "validate.php";
     // Call validate, pass form data as parameter and store the returned value
     $email = validate($_POST['email']);

@@ -2,7 +2,7 @@
 if(isset($_POST['msg']) && isset($_POST['listingname'])){
 //echo "here";
     // Include the necessary files
-    require_once "con.php";
+    require_once "con22.php";
 	$msg=$_POST['msg'];
 	$lname=$_POST['listingname'];
 	$lid=$_POST['lid'];
