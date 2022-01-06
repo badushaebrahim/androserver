@@ -1,0 +1,11 @@
+<?phpinclude 'con.php';
+
+$res= "SELECT * FROM SELLINGS";
+$r= mysqli_query($conn,$res);
+while($row = musqli_fetch_assoc(r)){
+$jso[] = $row; 
+}
+print(json_encode($jso));
+echo "hi";
+mysql-_close($conn);
+?>
