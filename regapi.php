@@ -7,10 +7,14 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 	$name = $_POST['name'];
     $email = validate($_POST['email']);
     $password = validate($_POST['password']);
+$lat1= $_POST['lati'];
+$lati=floatval($lat1);
+$longi2=$_POST['longi'];
+$longi=floatval($longi2);
     $Num = $_POST['number'];
 	$address = $_POST['address'];
     // Create the SQL query string. We'll use md5() function for data security. It calculates and returns the MD5 hash of a string
-    $sql="INSERT INTO `users`( `name`,`email`, `password`, `Number`, `address`) VALUES ('$name','$email','$password','$Num','$address')";
+    $sql="INSERT INTO `users`( `name`, `email`, `password`, `Number`, `address`, `lat`, `longi`) VALUES ('$name','$email','$password','$Num','$address',$lati,$longi)";
     // Execute the query. Print "success" on a successful execution, otherwise "failure".
 //echo "$sql";
     if(!$conn->query($sql)){
