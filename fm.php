@@ -7,7 +7,7 @@ $ge="SELECT * FROM `users` WHERE `uid`=1;";
 	$longi=$r['longi'];
 	
 	$num=$r['Number'];
-	echo"$longi";
+	echo"$r[address] ".gettype($r['address']);
 
 
 		?>

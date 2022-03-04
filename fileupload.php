@@ -13,14 +13,16 @@ include 'con22.php';
 		$qr= mysqli_query($conn,$getq);
 		$r=  mysqli_fetch_assoc($qr);
 	$lat=$r['lat'];
+	$lat1=floatval($lat);
 	$longi=$r['longi'];
 	$num=$r["Number"];
+	$lon=floatval($longi);
 	///donot edit
                    $filename="IMG".rand().".jpg";
 	   file_put_contents("upload/".$filename,base64_decode($img));
 //till here
-	$qry="INSERT INTO `sellings`(`type`, `Listing_title`, `imagelink`, `long_details`,  `sellerid`, `expected_price`)
-			 VALUES ('$type','$name','$filename','$design',$me,'$price')";
+	$qry="INSERT INTO `sellings`(`type`, `Listing_title`, `imagelink`, `long_details`,  `sellerid`, `expected_price`,`contactno`, `address`,`longi`, `latitude`)
+			 VALUES ('$type','$name','$filename','$design',$me,'$price','$r[Number]','$r[address]',$lon,$lat1)";
 
 			$res=mysqli_query($conn,$qry);
 			
