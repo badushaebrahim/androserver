@@ -1,7 +1,7 @@
 <?php
 include 'con22.php';
-
-$res= "SELECT * FROM `serv`";
+$me= $_GET['me'];
+$res= "SELECT * FROM `sellings`where Sellerid=$me";
 $r= mysqli_query($conn,$res);
 while($row = mysqli_fetch_assoc($r)){
 $jso[] = $row; 
