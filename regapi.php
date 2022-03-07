@@ -7,12 +7,12 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 	$name = $_POST['name'];
     $email = validate($_POST['email']);
     $password = validate($_POST['password']);
-//$lat1= $_POST['lati'];
-$lati1=10.15445;
+$lati1= $_POST['lati'];
+//$lati1=10.15445;
 $lati=floatval($lati1);
 //floatval($lat1);
-$longi2=75.155;
-//$_POST['longi'];
+//$longi2=75.155;
+$longi2=$_POST['longi'];
 $longi=floatval($longi2);
     $Num2 = $_POST['number'];
     $Num= intval($Num2);
