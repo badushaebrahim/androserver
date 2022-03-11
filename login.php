@@ -1,7 +1,5 @@
-
-
 <?php
-// Check if email and password are sets
+
 if(isset($_POST['email']) && isset($_POST['password'])){
     // Include the necessary files
     require_once "con22.php";
