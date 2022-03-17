@@ -1,6 +1,6 @@
 <?php
 include 'con22.php';
-$rid=$_GET['rid'];
+$rid=$_GET['id'];
 
 $sql="SELECT DISTINCT reciverid,prodid,prodname,sentername,senterid FROM `msgholder` WHERE `reciverid`=$rid";
 $r= mysqli_query($conn,$sql);
