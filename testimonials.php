@@ -74,9 +74,10 @@ include 'con22.php';
 								<table id="zctb" class="display table table-striped table-bordered table-hover" cellspacing="0" width="100%">
 									<thead>
 										<tr><th>Action</th>
-											<th>C_No</th>
-											<th>C_Id</th>
-											<th>Fedback</th>
+										<th>C_Id</th>
+										<th>Complaint</th>
+											
+											
 										</tr>
 									</thead>
 									
@@ -89,12 +90,14 @@ include 'con22.php';
 											while($row=mysqli_fetch_assoc($result))
 											{		?>
 												<tr>	<td><a href="deletelistadmin.php?id="<?php echo" $row[productid]";?>>remove listing</a></td>
-			  										<td><?php echo $row["cid"];?></td>
-													<td><?php echo $row["senter"];?></td>
-													<td><?php echo $row["productid"];?></td>
+												
+												<td><?php echo $row["cid"];?></td>
+													
 													<td><?php echo $row["complaint"];?></td>
+													
+													
 												</tr>
-			  									<?php $cnt=$cnt+1;
+			  									<?php 
 											}
 										}
 										?>
